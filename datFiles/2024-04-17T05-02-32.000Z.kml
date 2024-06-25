@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+		<Document>
+			<name>Air Quality from AirNow</name>
+			<open>1</open>
+		  <Style>
+				<ListStyle>
+		    	<listItemType>radioFolder</listItemType>
+				</ListStyle>    
+		  </Style>
+			<NetworkLink>
+				<name>Yesterday's Observed</name>
+				<visibility>1</visibility>
+				<Link>
+					<href>http://files.airnowtech.org/airnow/today/airnow_yest_obs.kml</href>
+					<refreshMode>onInterval</refreshMode>
+					<refreshInterval>300</refreshInterval>
+					<viewRefreshMode>never</viewRefreshMode>
+					<viewFormat>minx=[bboxWest]&amp;miny=[bboxSouth]&amp;maxx=[bboxEast]&amp;maxy=[bboxNorth]</viewFormat>
+				</Link>
+			</NetworkLink>
+			<NetworkLink>
+				<name>Current Conditions</name>
+				<visibility>1</visibility>
+				<Link>
+					<href>http://files.airnowtech.org/airnow/today/airnow_conditions.kml</href>
+					<refreshMode>onInterval</refreshMode>
+					<refreshInterval>300</refreshInterval>
+					<viewRefreshMode>never</viewRefreshMode>
+					<viewFormat>minx=[bboxWest]&amp;miny=[bboxSouth]&amp;maxx=[bboxEast]&amp;maxy=[bboxNorth]</viewFormat>
+				</Link>
+			</NetworkLink>
+			<NetworkLink>
+				<name>Today's Forecast</name>
+				<visibility>0</visibility>
+				<Link>
+					<href>http://files.airnowtech.org/airnow/today/airnow_today.kml</href>
+					<refreshMode>onInterval</refreshMode>
+					<refreshInterval>300</refreshInterval>
+					<viewRefreshMode>never</viewRefreshMode>
+					<viewFormat>minx=[bboxWest]&amp;miny=[bboxSouth]&amp;maxx=[bboxEast]&amp;maxy=[bboxNorth]</viewFormat>
+				</Link>
+			</NetworkLink>
+			<NetworkLink>
+				<name>Tomorrow's Forecast</name>
+				<visibility>0</visibility>
+				<Link>
+					<href>http://files.airnowtech.org/airnow/today/airnow_tomorrow.kml</href>
+					<refreshMode>onInterval</refreshMode>
+					<refreshInterval>300</refreshInterval>
+					<viewRefreshMode>never</viewRefreshMode>
+					<viewFormat>minx=[bboxWest]&amp;miny=[bboxSouth]&amp;maxx=[bboxEast]&amp;maxy=[bboxNorth]</viewFormat>
+				</Link>
+			</NetworkLink>			
+		</Document>
+</kml>

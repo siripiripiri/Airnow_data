@@ -1,0 +1,874 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+	<Document>
+		<name>Current Observed</name>
+			<Style id="Undefined">
+				<IconStyle>
+					<color>ffcccccc</color>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/undefined_circle.png</href>
+					</Icon>
+				</IconStyle>
+			</Style>
+			<!-- AQI Styles -->		
+			<Style id="normalStateGood">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi0triangle.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+			      <color>00000000</color>
+			    </LabelStyle>			    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="highlightStateGood">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi0triangle.png</href>
+					</Icon>
+				</IconStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>	
+			<Style id="normalStateModerate">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi1triangle.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+			      <color>00000000</color>
+			    </LabelStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>	
+			<Style id="highlightStateModerate">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi1triangle.png</href>
+					</Icon>
+				</IconStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="normalStateUnhealthySG">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi2triangle.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+			      <color>00000000</color>
+			    </LabelStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="highlightStateUnhealthySG">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi2triangle.png</href>
+					</Icon>
+				</IconStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="normalStateUnhealthy">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi3triangle.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+			      <color>00000000</color>
+			    </LabelStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="highlightStateUnhealthy">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi3triangle.png</href>
+					</Icon>
+				</IconStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="normalStateVeryUnhealthy">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi4triangle.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+			      <color>00000000</color>
+			    </LabelStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="highlightStateVeryUnhealthy">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi4triangle.png</href>
+					</Icon>
+				</IconStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="normalStateHazardous">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi5triangle.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+			      <color>00000000</color>
+			    </LabelStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Style id="highlightStateHazardous">
+				<IconStyle>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/aqi5triangle.png</href>
+					</Icon>
+				</IconStyle>		    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>		
+			<StyleMap id="Good">
+			  <Pair>
+			    <key>normal</key>
+			    <styleUrl>#normalStateGood</styleUrl>
+			  </Pair>
+			  <Pair>
+			    <key>highlight</key>
+			    <styleUrl>#highlightStateGood</styleUrl>
+			  </Pair>
+			</StyleMap>
+			<StyleMap id="Moderate">
+			  <Pair>
+			    <key>normal</key>
+			    <styleUrl>#normalStateModerate</styleUrl>
+			  </Pair>
+			  <Pair>
+			    <key>highlight</key>
+			    <styleUrl>#highlightStateModerate</styleUrl>
+			  </Pair>
+			</StyleMap>
+			<StyleMap id="UnhealthySG">
+			  <Pair>
+			    <key>normal</key>
+			    <styleUrl>#normalStateUnhealthySG</styleUrl>
+			  </Pair>
+			  <Pair>
+			    <key>highlight</key>
+			    <styleUrl>#highlightStateUnhealthySG</styleUrl>
+			  </Pair>
+			</StyleMap>
+			<StyleMap id="Unhealthy">
+			  <Pair>
+			    <key>normal</key>
+			    <styleUrl>#normalStateUnhealthy</styleUrl>
+			  </Pair>
+			  <Pair>
+			    <key>highlight</key>
+			    <styleUrl>#highlightStateUnhealthy</styleUrl>
+			  </Pair>
+			</StyleMap>
+			<StyleMap id="VeryUnhealthy">
+			  <Pair>
+			    <key>normal</key>
+			    <styleUrl>#normalStateVeryUnhealthy</styleUrl>
+			  </Pair>
+			  <Pair>
+			    <key>highlight</key>
+			    <styleUrl>#highlightStateVeryUnhealthy</styleUrl>
+			  </Pair>
+			</StyleMap>
+			<StyleMap id="Hazardous">
+			  <Pair>
+			    <key>normal</key>
+			    <styleUrl>#normalStateHazardous</styleUrl>
+			  </Pair>
+			  <Pair>
+			    <key>highlight</key>
+			    <styleUrl>#highlightStateHazardous</styleUrl>
+			  </Pair>
+			</StyleMap>
+			<!--
+			<ScreenOverlay>
+				<name>Legend</name>
+				<open>1</open>
+				<visibility>1</visibility>
+				<Icon>
+					<href>http://files.airnowtech.org/airnow/today/ges_banner.gif</href>
+				</Icon>
+				<overlayXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+				<screenXY x="0" y="1" xunits="fraction" yunits="fraction"/>
+				<size x="372" y="115" xunits="pixels" yunits="pixels"/>
+			</ScreenOverlay>			
+			-->	
+			<Style id="legendIcon">
+				<IconStyle>
+					<scale>2.5</scale>
+					<Icon>
+						<href>http://files.airnowtech.org/airnow/today/legendicon.png</href>
+					</Icon>
+				</IconStyle>
+				<LabelStyle>
+			      <color>00000000</color>
+			    </LabelStyle>			    
+				<BalloonStyle>
+			    	<bgColor>ffffffff</bgColor>
+					<text>$[description]</text>
+				</BalloonStyle>
+			</Style>
+			<Placemark>
+				<name>AQI Legend</name>
+		        <visibility>1</visibility>
+				<Snippet maxLines="1">Legend</Snippet>
+				<description>
+					<![CDATA[<div align="center">
+							<br /><img src="http://files.airnowtech.org/airnow/today/ges_banner.gif" title="Air Quality Information" alt="Air Quality Information">
+						</div>
+						<div align="center">
+							<br />						
+							<table width="445" cellspacing="7">
+								<tr><td>&nbsp;</td>
+									<td>
+										The <b>Air Quality Index (AQI)</b> identifies air quality as it relates to health effects 
+										you may experience within a few hours or days after breathing polluted air. Ground-level 
+										ozone and airborne particles (PM2.5 and PM10) pose the greatest threat to human health.<br />
+										For more information visit: <a href="http://www.airnow.gov/index.cfm?action=static.aqi"><font color="#0f79b9">http://www.airnow.gov/index.cfm?action=static.aqi</font></a>
+								</td>
+							</tr>
+							<tr><td>&nbsp;</td>
+								<td>
+										<b>Particle pollution</b>, also known as "particulate matter", is a mixture of microscopic 
+										solids and liquid droplets suspended in air.  The size of particles is directly linked to 
+										their potential for causing health problems.  Fine particles (known as PM2.5) pose the 
+										greatest problems because they can get deep into your lungs and some may even get into your 
+										bloodstream.  Particles less than 10 micrometers (PM10), include both fine and coarse dust 
+										particles that can pass through the nose and throat and get into your lungs. <br />
+										For more information visit: <a href="http://airnow.gov/index.cfm?action=jump.jump_particle"><font color="#0f79b9">http://airnow.gov/index.cfm?action=jump.jump_particle</font></a>
+								</td>
+							</tr>
+							<tr><td>&nbsp;</td>
+								<td>
+									<b>Ozone</b> near ground level forms when pollutants emitted by cars, power plants, 
+									industrial boilers, refineries, chemical plants, and other sources react chemically in the 
+									presence of sunlight. Ground-level ozone is a harmful air pollutant.<br />
+									For more information visit: <a href="http://airnow.gov/index.cfm?action=jump.jump_ozone"><font color="#0f79b9">http://airnow.gov/index.cfm?action=jump.jump_ozone</font></a>
+								</td>
+							</tr>
+						</table>
+					</div>
+					]]>
+				</description>
+				<styleUrl>legendIcon</styleUrl>
+				<Point>
+					<coordinates>-76.0000,31.0000,0</coordinates>
+				</Point>
+			</Placemark>
+			
+			
+		<Placemark>
+			<Snippet maxLines="1">Unit386</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Unit386</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 3</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-105.895560,35.687010,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Unit67</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Unit67</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 5</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-105.123950,39.714350,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Unit 66</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Unit 66</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 10</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-105.123970,39.714370,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">MMFS10016</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">MMFS10016</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 4</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-105.123900,39.714320,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Unit69</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Unit69</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 7</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-121.405380,43.997880,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Unit0265</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Unit0265</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 5</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-105.123950,39.714360,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">MMCA81036</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">MMCA81036</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 14</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-122.128300,41.251850,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">USFS 2264</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">USFS 2264</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 0</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-105.508560,40.742050,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">MMCA82032</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">MMCA82032</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 13</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-119.758930,34.445660,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">MMFS11307</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">MMFS11307</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 1</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-112.041840,46.584200,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">MMFS10659</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">MMFS10659</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 6</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-121.260160,44.021910,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">MMFS10661</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">MMFS10661</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 5</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-107.488250,37.305470,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">MMFS10662</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">MMFS10662</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 4</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-107.600980,37.227200,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Kernville</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Kernville</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 31</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-118.430080,35.768870,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Goldendale</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Goldendale</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 2</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-120.822950,45.821660,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Lahaina Pump 4</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Lahaina Pump 4</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 14</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-156.685770,20.883410,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Lahainaluna HS</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Lahainaluna HS</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 7</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-156.659980,20.886710,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Lahaina BWS</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Lahaina BWS</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 10</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-156.668150,20.883740,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Aa St</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Aa St</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 18</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-156.681470,20.900470,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Lahaina Civic Center</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Lahaina Civic Center</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 19</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-156.683840,20.904470,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Lahaina Boys and Girls Club</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Lahaina Boys and Girls Club</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 15</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-156.670660,20.868970,100.0000</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<Snippet maxLines="1">Medical Lake Mobile</Snippet>
+			<description><![CDATA[
+			<div align="center">
+				<table border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<td colspan="2">
+							<b><font color="#0f79b9" size="3" face="arial">Air&nbsp;Quality&nbsp;Index&nbsp;(AQI)&nbsp;Information</font><br /><font color="#0f79b9" size="2" face="arial">Medical Lake Mobile</font></b>
+						</td>
+					</tr>
+					<tr valign="bottom">
+						<td valign="bottom" colspan="2">
+							<font size="3" face="arial"><b>Current Conditions</b></font>
+						</td>
+					</tr>
+		 			<tr><td><font size="2" face="arial">PM<sub>2.5</sub> </font></td><td><img src="http://files.airnowtech.org/airnow/today/aqi0.png">&nbsp;<font size="2" face="arial"><b><i>Good 5</i></b></font></td></tr>
+				</table>
+				<i>Updated: Wed 04/17/2024 12:00 AM EDT</i>
+			</div>
+		 		]]></description>
+			<styleUrl>#Good</styleUrl>
+			<Point>
+				<altitudeMode>relativeToGround</altitudeMode> 
+				<coordinates>-117.696400,47.567240,100.0000</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+</kml>
