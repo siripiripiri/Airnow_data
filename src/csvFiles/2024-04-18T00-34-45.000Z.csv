@@ -1,6 +1,6 @@
 AQSID,SiteName,Status,EPARegion,Latitude,Longitude,Elevation,GMTOffset,CountryCode,StateName,ValidDate,ValidTime,DataSource,ReportingArea_PipeDelimited,OZONE_AQI,PM10_AQI,PM25_AQI,NO2_AQI,OZONE_Measured,PM10_Measured,PM25_Measured,NO2_Measured,NO2,NO2_Unit,CO,CO_Unit,PM25,PM25_Unit,SO2,SO2_Unit,OZONE,OZONE_Unit,PM10,PM10_Unit
 000010601,Goose Bay,Active,CA,53.3047,-60.3644,38.7,-4,CA,CC,04/17/2024,00:00,Canadian Air and Precipitation Monitoring Network,,30,,,,1,0,0,0,,,,,,,,,33.0,PPB,""","
-000020104,CHARLOTTETOWN,Active,CA,46.2406,-63.1306,19.8,-4,CA,CC,04/17/2024,00:00,Canada-Prince Edward Island1,,35,,13,0,1,0,1,1,0.6,PPB,,,2.9,UG/M3,0.0,PPB,36.0,PPB,""","
+000020104,CHARLOTTETOWN,Active,CA,46.406,-63.1306,19.8,-4,CA,CC,04/17/2024,00:00,Canada-Prince Edward Island1,,35,,13,0,1,0,1,1,0.6,PPB,,,2.9,UG/M3,0.0,PPB,36.0,PPB,""","
 000020301,WELLINGTON,Active,CA,46.4783,-63.9869,33.9,-4,CA,CC,04/17/2024,00:00,Canada-Prince Edward Island1,,30,,10,0,1,0,1,1,0.1,PPB,,,1.6,UG/M3,,,33.0,PPB,""","
 000020401,SOUTHAMPTON,Active,CA,46.3864,-62.5828,15.3,-4,CA,CC,04/17/2024,00:00,Canada-Prince Edward Island1,,31,,12,0,1,0,1,1,0.4,PPB,,,3.0,UG/M3,,,32.0,PPB,""","
 000030113,JOHNSTON BUILDING -,Active,CA,44.647175,-63.573689,29.0,-4,CA,CC,04/17/2024,00:00,Canada-Nova Scotia1,,26,,22,7,1,0,1,1,7.6,PPB,0.1,PPM,4.0,UG/M3,0.2,PPB,31.0,PPB,""","
